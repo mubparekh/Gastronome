@@ -1,0 +1,23 @@
+<div class="row">
+	<div class="ingredient-search-box">
+    <div class="ingredient-search-box-inner">
+      <h1>Ingredient</h1>
+      <div>
+        <input id="Ingredient" type="text" oninput="displayMatches(<%= @ingredients.to_json %>, <%= @recipes.to_json %>)" />
+      </div>
+      <div class="ingredient-examples">
+        <ul>
+          <li><%= image_tag 'Meats.png' %><span class="example-name">Meats</span></li>
+          <li><%= image_tag 'Veggies.png' %><span class="example-name">Veggies</span></li>
+          <li><%= image_tag 'Fruits.png' %><span class="example-name">Fruits</span></li>
+          <li><%= image_tag 'Grains.png' %><span class="example-name">Grains</span></li>
+          <li><%= image_tag 'Dairy.png' %><span class="example-name">Dairy</span></li>
+        </ul>
+      </div>
+      <div id="matches" class="well">Results</div>
+      <div class="search-back">
+        <%= link_to "Back", root_url, :method => :get  %>
+      </div>
+    </div>
+  </div>
+</div>

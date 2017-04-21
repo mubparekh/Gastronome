@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="recipes-index-header">
+    <div class="recipes-index-header-inner">
+      <h1>List of Recipes</h1>
+    </div>
+  </div>
+
+  <div class="recipe-index-box">
+    <div class="recipe-index-box-inner">
+      <table>
+        <thead>
+          <tr>
+            <th>Recipe Name</th>
+            <th>Cooking Time</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+      
+        <tbody>
+          <% @recipes.each do |recipe| %>
+            <tr>
+              <td><%= link_to recipe.name, recipe %></td>
+              <td><%= recipe.cooking_time %></td>
+              <td><%= recipe.get_rating %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <div class="return-links">
+        <%= link_to 'Home', root_path %> |
+        <%= link_to 'New Recipe', new_recipe_path %>
+      </div>
+    </div>
+  </div>
+</div>

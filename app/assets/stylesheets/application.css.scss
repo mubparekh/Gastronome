@@ -1,0 +1,224 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+
+/* Be sure to import any other SCSS files we are using */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "search";
+@import "recipes";
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,700);
+
+body {
+    background: image-url('background.jpg') no-repeat #fff;
+    background-size: 100% auto;
+}
+
+nav.navbar {
+    font-family: Roboto;
+    background-color: white;
+    height: auto;
+    border-radius: 0;
+
+    -webkit-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.33);
+    -moz-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.33);
+    box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.33);
+
+    .navbar-nav {
+        font-weight: 700;
+
+        li {
+            text-transform: uppercase;
+            a {
+                line-height: 58px;
+                color: black;
+                &:hover { color: gray; }
+            }
+        }
+
+        .dropdown-menu {
+            border-radius: 0;
+            padding: 0;
+
+            li {
+                border-bottom: 2px solid black;
+                &:last-child { border-bottom: none; }
+
+                a {
+                    line-height: 36px;
+                }
+            }
+        }
+    }
+}
+
+.navbar-header {
+    width: 35%;
+    padding: 10px 5px;
+}
+
+.navbar-brand {
+    height: auto;
+    padding: 0;
+    img {
+        height: 66px;
+    }
+}
+
+.site-title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.logo-area {
+    @extend .col-xs-4;
+    img { width: 100%; }
+    a:hover { background: none; }
+}
+
+.add-recipe-area,
+.login-area {
+    img { 
+        width: 50%;
+        padding-top: 20px;
+        &:hover { background: none; }
+    }
+
+    a:hover { background: none; }
+}
+
+.add-recipe-area {
+    @extend .col-xs-4;
+    padding-left: 0;
+}
+
+.login-area {
+    @extend .col-xs-4;
+    text-align: right;
+    padding-right: 0;
+}
+
+.list-of-recipes {
+    background-color: black;
+    margin: 6px 0;
+    padding: 22px;
+    font-size: 32px;
+    color: #F0F8FF;
+    display: block;
+    text-transform: uppercase;
+
+    &:hover {
+        text-decoration: none;
+        background-color: #e6e6e6;
+        color: #333333;
+    }
+}
+
+.search-box {
+    @extend .col-xs-4;
+    @extend .col-xs-offset-4;
+    margin-top: 90px;
+    text-align: center;
+    
+    font-family: Roboto;
+}
+
+.search-box-title {
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    padding: 12px;
+    margin-bottom: 0;
+    font-size: 24px;
+}
+
+.search-by {
+    text-transform: uppercase;
+    color: #F0F8FF;
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.bottom-search-area {
+    background-color: black;
+    padding: 12px;
+}
+
+.search-buttons {
+    a {
+        @extend .btn;
+        @extend .btn-default;
+        width: 31%;
+        background-color: black;
+        color: #F0F8FF;
+        border-radius: 0;
+        text-transform: uppercase;
+        padding: 8px 0px;
+    }
+}
+
+.big-text-container {
+    text-align: center;
+    margin-top: 60px;
+
+    img {
+        width: 88%;
+    }
+}
+
+.rightarrow
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 0;
+	height: 0;
+	border-top: 10px solid rgba(#fff, 0);
+	border-bottom: 10px solid rgba(#fff, 0);
+	border-left: 15px solid #80bbea;
+	float: left;
+	&:hover
+	{
+		cursor: pointer;
+	}
+}
+
+.downarrow
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 0;
+	height: 0;
+	border-right: 10px solid rgba(#fff, 0);
+	border-left: 10px solid rgba(#fff, 0);
+	border-top: 15px solid #80bbea;
+	float: left;
+	&:hover
+	{
+		cursor: pointer;
+	}
+}
+
+.comment-header
+{
+	position: relative;
+	padding-left: 10px;
+}
+
+.comment-container
+{
+	display: none;
+}

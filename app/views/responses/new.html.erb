@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="add-response-header">
+    <div class="add-response-header-inner">
+      <h1>New Comment</h1>
+    </div>
+  </div>
+
+  <div class="add-response-box">
+    <div class="add-response-box-inner">
+      <div class="add-response-form-area">
+        <%= render 'form' %>
+
+        <div class="return-links">
+          <%= link_to "Home", root_url %> | 
+          <%= link_to "List of Recipes", recipes_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

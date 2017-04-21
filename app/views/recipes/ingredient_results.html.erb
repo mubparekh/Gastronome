@@ -1,0 +1,13 @@
+<% if @recipes.length > 0 %>
+	<span>The results are in!</span>
+	<% @recipes.each do |recipe| %>
+		<div id = "<%= recipe.id %>" class = "recipe_list">
+			<%= recipe.name %>
+		</div>
+	<% end %>
+<% else %>
+	<span>No Results Found</span>
+<% end %>
+<div>
+	<%= link_to "Back", root_url, :method => :get  %>
+</div>

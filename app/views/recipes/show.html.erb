@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="show-recipe-box">
+    <div class="show-recipe-box-inner">
+      <h1><%= @recipe.name%></h1>
+      
+      <div class="recipe-details">
+        <p><span class="detail-label">Descrption:</span> <%= @recipe.description %></p>
+        <p><span class="detail-label">Rating:</span> <%= @rating %></p>
+        <p><span class="detail-label">Serving Size:</span> <%= @recipe.serving_size %> </p>
+        <p><span class="detail-label">Cooking Time:</span> <%= @recipe.cooking_time %> </p>
+        <p><span class="detail-label">Cuisine:</span> <%= @recipe.cuisine_type %> </p>
+        <p><span class="detail-label">Ingredients:</span> <%= @recipe.ingredient_list %></p>
+        <p><span class="detail-label">Directions:</span> <%= @recipe.directions %></p>
+        
+        <p>Date Created: <%= @recipe.created_at %></p>
+        <p>Last Update: <%= @recipe.updated_at %></p>
+      </div>
+      
+      <div class="return-links">
+        <%= link_to 'Home', root_url %> |
+        <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+        <%= link_to 'Back', recipes_path %> |
+        <%= link_to 'New Comment', new_response_path(@recipe.id) %>
+      </div>
+
+      <div class="comment-header">
+        <div id="arrow" class="rightarrow" onclick="showComments()"></div>
+        <span style="margin-left: 5px">Comments:</span>
+      </div>
+
+      <div id="comments" class="comment-container">
+        <% @responses.each do |response| %>
+          <div id="<%= response.id %>" class="comment">
+            <%= response.comment %></br>
+            Rating: <%= response.rating %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

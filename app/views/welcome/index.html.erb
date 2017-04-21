@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="add-recipe-area">
+        <%= link_to image_tag('add-recipe.png', border: 0), new_recipe_path, class: 'add-recipe' %>
+    </div>
+    <div class="logo-area">
+    	<%= link_to image_tag('logo.png'), root_path %>
+    </div>
+    <div class="login-area">
+        <%= link_to image_tag('login.png', border: 0), nil, class: 'login-button' %>
+    </div>
+</div>
+
+<div class="row">
+	<div class="big-text-container">
+		<%= image_tag 'love-of-food.png' %>
+	</div>
+</div>
+
+<div class="row">
+    <div class="search-box">
+        <h4 class="search-box-title">Food is our common ground, a universal experience.</h4>
+        <%= link_to "List of Recipes", recipes_path, class: 'list-of-recipes' %>
+        <div class="bottom-search-area">
+        	<h5 class="search-by">Search by:</h5>
+        	<div class="search-buttons">
+        	    <%= link_to "Name", name_search_path %>
+        	    <%= link_to "Ingredient", ingredient_search_path %>
+        	    <%= link_to "Cuisine", cuisine_search_path %>
+        	</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="cuisine-search-box">
+    <div class="cuisine-search-box-inner">
+      <h1>Cuisine</h1>
+      <div class="cuisine-options">
+        <ul>
+          <% @cuisine_types.each do |cuisine| %>
+            <li><%= link_to "#{cuisine}", "cuisine/#{cuisine}" %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="return-links">
+        <%= link_to "Back", root_url, :method => :get  %> |
+        <%= link_to "Home", root_url, :method => :get  %>
+      </div>
+    </div>
+  </div>
+</div>

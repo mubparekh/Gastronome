@@ -1,0 +1,117 @@
+.name-search-box,
+.cuisine-search-box {
+  margin-top: 60px;
+}
+
+.name-search-box,
+.ingredient-search-box,
+.name-search-results-box,
+.cuisine-search-results-box,
+.show-recipe-box {
+  @extend .col-xs-8;
+  @extend .col-xs-offset-2;
+}
+
+.cuisine-search-box {
+  @extend .col-xs-6;
+  @extend .col-xs-offset-3;
+  padding: 0;
+}
+
+.name-search-box,
+.ingredient-search-box,
+.cuisine-search-box,
+.name-search-results-box,
+.cuisine-search-results-box,
+.show-recipe-box {
+  background-color: black;
+  text-align: center;
+  font-family: Roboto;
+  text-transform: uppercase;
+  color: white;
+  padding: 0;
+
+  input[type="submit"] {
+    background: black;
+    border: 4px white;
+    border-style: double;
+    text-transform: uppercase;
+    height: 50px;
+    padding: 0 25px;
+    font-size: 22px;
+    margin-left: 18px;
+
+    &:hover {
+      background-color: rgb(80, 80, 80);
+    }
+  }
+
+  input[type="text"] {
+    color: black;
+    width: 55%;
+    height: 36px;
+  }
+
+  h1 {
+    margin-bottom: 40px;
+    font-weight: 300;
+    font-size: 40px;
+  }
+}
+
+.name-search-box-inner,
+.ingredient-search-box-inner,
+.cuisine-search-box-inner,
+.name-search-results-box-inner,
+.cuisine-search-results-box-inner,
+.show-recipe-box-inner {
+  margin: 7px;
+  padding: 20px 0;
+  border: 2px solid white;
+}
+
+.search-back {
+  a { color: white; }
+  margin-top: 100px;
+}
+
+#matches {
+  margin: 30px 80px;
+  color: black;
+}
+
+.ingredient-examples {
+  margin-top: 30px;
+
+  li {
+    list-style-type: none;
+    width: 19%;
+    display: inline-block;
+    font-size: 23px;
+  }
+
+  img {
+    width: 42px;
+    margin-right: 5px;
+  }
+}
+
+.cuisine-options {
+  a {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  li {
+    display: inline-block;
+    width: 32%;
+    padding: 10px;
+
+    // This is a hack to get everything to line up right since we
+    // know how many items we have.
+    &:last-child {
+      margin-right: 33%;
+    }
+  }
+}

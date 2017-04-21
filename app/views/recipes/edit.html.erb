@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="edit-recipe-header">
+    <div class="edit-recipe-header-inner">
+      <h1>Editing Recipe</h1>
+    </div>
+  </div>
+
+  <div class="edit-recipe-box">
+    <div class="edit-recipe-box-inner">
+      <div class="edit-recipe-form-area">
+        <%= render 'form' %>
+      </div>
+
+      <div class="return-links">
+        <%= link_to 'Show', @recipe %> |
+        <%= link_to 'Back', recipes_path %>
+      </div>
+    </div>
+  </div>
+</div>

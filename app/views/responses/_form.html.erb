@@ -1,0 +1,29 @@
+<%= form_for(@response) do |f| %>
+  <% if @response.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@response.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% @response.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :comment, 'Comment' %>
+    <%= f.text_area :comment, rows: 4 %>
+  </p>
+
+  <p>
+    <%= f.label :rating, 'Rating' %>
+    <%= f.number_field :rating, in: 0..10 %>
+  </p>
+	
+	<%= f.hidden_field :recipe_id, value: @recipe_id %>
+	
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

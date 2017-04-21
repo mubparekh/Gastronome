@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="name-search-results-box">
+    <div class="name-search-results-box-inner">
+      <h1>Results</h1>
+
+      <% if @recipes.length > 0 %>
+        <table>
+          <thead>
+            <tr>
+              <th>Recipe Name</th>
+              <th>Cooking Time</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <%= render partial: "recipe", collection: @recipes %>
+          </tbody>
+        </table>
+      <% else %>
+        <span>Sorry, no matches :(</span>
+      <% end %>
+      <div class="return-links">
+        <%= link_to "Back", name_search_path, :method => :get  %>
+      </div>
+    </div>
+  </div>
+</div>
